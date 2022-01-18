@@ -1,7 +1,34 @@
+@import "../../global.scss";
+
 .portfolio {
   background: linear-gradient(45deg, #d42222, #22d46c);
+  display: flex;
+  flex-direction: column;
   background-size: 400% 400%;
+  align-items: center;
   animation: GradientBackground 10s ease infinite;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      font-size: 14px;
+      margin-right: 50px;
+      padding: 7px;
+
+      &.active {
+        background-color: $maincolor;
+        color: white;
+      }
+    }
+  }
 }
 
 @keyframes GradientBackground {
